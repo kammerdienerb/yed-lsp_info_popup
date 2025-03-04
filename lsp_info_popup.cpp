@@ -451,9 +451,9 @@ static void draw(yed_event *event) {
             yed_attrs a = attrs;
             yed_combine_attrs(&a, (yed_attrs*)array_item(*line_attrs, c - 1));
             yed_set_attr(a);
-            yed_screen_print_n_over(&git->c, yed_get_glyph_len(*git));
+            yed_screen_print_n_over(&git->c, yed_get_glyph_len(git));
 
-            c += yed_get_glyph_width(*git);
+            c += yed_get_glyph_width(git);
         }
 
         for (; c < width + 1; c += 1) {
